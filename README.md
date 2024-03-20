@@ -46,23 +46,29 @@ For printing various integer types, **special macros** need to be used:
 
 The program reads commands from the standard input until the `"exit"` command is received. Below are the supported commands:
 
-0. **exit**: Terminates the program after deallocating memory.
-   - The program cleans up allocated memory and gracefully exits.
+`exit`: Terminates the program after deallocating memory.
 
-1. **add_last**: Adds a dedication to the end of the vector.
-   - Appends a **new dedication** to the end of the vector, incrementing its length accordingly.
+- The program cleans up allocated memory and gracefully exits.
 
-2. **add_at**: Inserts a dedication at a specified `index` in the vector.
-   - Similar to `add_last`, it inserts a **dedication** at a specified index in the vector. It ensures proper error handling if the index is out of bounds.
+`add_last`: Adds a dedication to the end of the vector.
 
-3. **find**: Retrieves and displays the **dedication** at a specified `index`.
-   - Retrieves and displays the dedication located at the specified index in the vector.
+- Appends a **new dedication** to the end of the vector, incrementing its length accordingly.
 
-4. **delete_at**: Deletes the **dedication** at a specified `index` from the vector.
-   - Removes the dedication located at the specified index from the vector, ensuring that the remaining elements are properly shifted.
+`add_at`: Inserts a dedication at a specified `index` in the vector.
 
-5. **print**: Prints **all dedications** in the vector.
-   - Iterates through the vector and prints each dedication according to the specified format.
+- Similar to `add_last`, it inserts a **dedication** at a specified index in the vector. It ensures proper error handling if the index is out of bounds.
+
+`find`: Retrieves and displays the **dedication** at a specified `index`.
+
+- Retrieves and displays the dedication located at the specified index in the vector.
+
+`delete_at`: Deletes the **dedication** at a specified `index` from the vector.
+
+- Removes the dedication located at the specified index from the vector, ensuring that the remaining elements are properly shifted.
+
+`print`: Prints **all dedications** in the vector.
+
+- Iterates through the vector and prints each dedication according to the specified format.
 
 ```bash
     Type <type header>
