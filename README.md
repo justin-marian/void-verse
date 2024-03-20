@@ -30,17 +30,29 @@ The program reads commands from the standard input until the `"exit"` command is
 
 Below are the supported commands:
 
-`exit`: Terminates the program after deallocating memory. The program cleans up allocated memory and gracefully exits.
+`exit`: Terminates the program after deallocating memory.
 
-`add_last`: Adds a dedication to the end of the vector. Appends a **new dedication** to the end of the vector, incrementing its length accordingly.
+- The program cleans up allocated memory and gracefully exits.
 
-`add_at`: Inserts a dedication at a specified `index` in the vector. It inserts a **dedication** at a specified index in the vector, ensuring that the index is not out of bounds.
+`add_last`: Adds a dedication to the end of the vector.
 
-`find`: Retrieves and displays the **dedication** at a specified `index`. Displays the dedication located at the specified index in the vector.
+- Appends a **new dedication** to the end of the vector and increases length.
 
-`delete_at`: Deletes the **dedication** at a specified `index` from the vector. Removes the dedication located at the specified index from the vector and the remaining elements are properly shifted.
+`add_at`: Inserts a dedication at a specified `index` in the vector.
 
-`print`: Prints **all dedications** in the vector. Prints each dedication according to the specified format.
+- It inserts a **dedication** at a specified index in the vector, ensuring that the index is not out of bounds.
+
+`find`: Retrieves and displays the **dedication** at a specified `index`.
+
+- Displays the dedication located at the specified index in the vector.
+
+`delete_at`: Deletes the **dedication** at a specified `index` from the vector.
+
+- Removes the dedication located at the specified index from the vector and the remaining elements are properly shifted.
+
+`print`: Prints **all dedications** in the vector.
+
+- Prints each dedication according to the specified format.
 
 ```bash
     Type <type header>
