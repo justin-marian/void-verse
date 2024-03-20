@@ -44,11 +44,11 @@ Below are the supported commands:
 
 `find`: Retrieves and displays the **dedication** at a specified `index`.
 
-- Displays the dedication located at the specified index in the vector.
+- Displays the dedication at the specified index in the vector.
 
 `delete_at`: Deletes the **dedication** at a specified `index` from the vector.
 
-- Removes the dedication located at the specified index from the vector and the remaining elements are properly shifted.
+- Removes the dedication at the specified index from the vector and the remaining elements are properly shifted.
 
 `print`: Prints **all dedications** in the vector.
 
