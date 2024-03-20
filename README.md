@@ -24,24 +24,6 @@ For printing various integer types, **special macros** need to be used:
     printf("%"PRId32"\n", val) // where val is an int32_t
 ```
 
-- **Type 1**:
-  - `char*`: Dedicator's name (variable size)
-  - `int8_t`: First banknote value
-  - `int8_t`: Second banknote value
-  - `char*`: Dedicatee's name (variable size)
-  
-- **Type 2**:
-  - `char*`: Dedicator's name (variable size)
-  - `int16_t`: First banknote value
-  - `int32_t`: Second banknote value
-  - `char*`: Dedicatee's name (variable size)
-  
-- **Type 3**:
-  - `char*`: Dedicator's name (variable size)
-  - `int32_t`: First banknote value
-  - `int32_t`: Second banknote value
-  - `char*`: Dedicatee's name (variable size)
-
 ## Usage
 
 The program reads commands from the standard input until the `"exit"` command is received. Below are the supported commands:
@@ -56,11 +38,11 @@ The program reads commands from the standard input until the `"exit"` command is
 
 `add_at`: Inserts a dedication at a specified `index` in the vector.
 
-- Similar to `add_last`, it inserts a **dedication** at a specified index in the vector. It ensures proper error handling if the index is out of bounds.
+- Similar to `add_last`, it inserts a **dedication** at a specified index in the vector, ensuring that the index is not out of bounds.
 
 `find`: Retrieves and displays the **dedication** at a specified `index`.
 
-- Retrieves and displays the dedication located at the specified index in the vector.
+- Displays the dedication located at the specified index in the vector.
 
 `delete_at`: Deletes the **dedication** at a specified `index` from the vector.
 
@@ -68,7 +50,7 @@ The program reads commands from the standard input until the `"exit"` command is
 
 `print`: Prints **all dedications** in the vector.
 
-- Iterates through the vector and prints each dedication according to the specified format.
+- Prints each dedication according to the specified format.
 
 ```bash
     Type <type header>
@@ -82,8 +64,10 @@ The program reads commands from the standard input until the `"exit"` command is
 
 Memory management is crucial for the project's success. It consists of two main parts:
 
-1) **Correct Memory Allocation**: Memory should be dynamically allocated for all strings and structures used. Static declarations **ARE NOT PERMITED**.
-2) **Proper Memory Deallocation**: Memory should be deallocated correctly and completely. To ensure this, we will use Valgrind for testing. The program should not display any invalid reads or memory leaks. Errors related to redirection will not be penalized.
+1) **Correct Memory Allocation**: Memory should be dynamically allocated for all strings and structures used.
+   - Static declarations **ARE NOT PERMITED**.
+2) **Proper Memory Deallocation**: Memory should be deallocated correctly and completely, we use Valgrind for testing.
+   - The program should not display any invalid reads or memory leaks. Errors related to redirection will not be penalized.
 
 To ensure proper memory management, Valgrind will be used for memory leak detection and debugging. The following command can be used to run Valgrind:
 
