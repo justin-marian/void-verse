@@ -26,31 +26,21 @@ For printing various integer types, **special macros** need to be used:
 
 ## Usage
 
-The program reads commands from the standard input until the `"exit"` command is received. Below are the supported commands:
+The program reads commands from the standard input until the `"exit"` command is received.
 
-`exit`: Terminates the program after deallocating memory.
+Below are the supported commands:
 
-- The program cleans up allocated memory and gracefully exits.
+`exit`: Terminates the program after deallocating memory. The program cleans up allocated memory and gracefully exits.
 
-`add_last`: Adds a dedication to the end of the vector.
+`add_last`: Adds a dedication to the end of the vector. Appends a **new dedication** to the end of the vector, incrementing its length accordingly.
 
-- Appends a **new dedication** to the end of the vector, incrementing its length accordingly.
+`add_at`: Inserts a dedication at a specified `index` in the vector. It inserts a **dedication** at a specified index in the vector, ensuring that the index is not out of bounds.
 
-`add_at`: Inserts a dedication at a specified `index` in the vector.
+`find`: Retrieves and displays the **dedication** at a specified `index`. Displays the dedication located at the specified index in the vector.
 
-- Similar to `add_last`, it inserts a **dedication** at a specified index in the vector, ensuring that the index is not out of bounds.
+`delete_at`: Deletes the **dedication** at a specified `index` from the vector. Removes the dedication located at the specified index from the vector and the remaining elements are properly shifted.
 
-`find`: Retrieves and displays the **dedication** at a specified `index`.
-
-- Displays the dedication located at the specified index in the vector.
-
-`delete_at`: Deletes the **dedication** at a specified `index` from the vector.
-
-- Removes the dedication located at the specified index from the vector, ensuring that the remaining elements are properly shifted.
-
-`print`: Prints **all dedications** in the vector.
-
-- Prints each dedication according to the specified format.
+`print`: Prints **all dedications** in the vector. Prints each dedication according to the specified format.
 
 ```bash
     Type <type header>
@@ -66,8 +56,8 @@ Memory management is crucial for the project's success. It consists of two main 
 
 1) **Correct Memory Allocation**: Memory should be dynamically allocated for all strings and structures used.
    - Static declarations **ARE NOT PERMITED**.
-2) **Proper Memory Deallocation**: Memory should be deallocated correctly and completely, we use Valgrind for testing.
-   - The program should not display any invalid reads or memory leaks. Errors related to redirection will not be penalized.
+2) **Proper Memory Deallocation**: Memory should be deallocated correctly and completely.
+   - It should not display any invalid reads or memory leaks. Errors related to redirection will not be penalized.
 
 To ensure proper memory management, Valgrind will be used for memory leak detection and debugging. The following command can be used to run Valgrind:
 
